@@ -11,10 +11,10 @@ class Fib:
         self.next = next
 
     def __iter__(self):
-        return FibIterator(self)
+        return Iterator(self)
 
 
-class FibIterator:
+class Iterator:
     """Concrete implementation of the iterator protocol"""
     def __init__(self, link):
         self.here = link
