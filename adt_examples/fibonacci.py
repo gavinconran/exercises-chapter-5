@@ -19,6 +19,7 @@ class Fib:
 
 class FibIterator:
     """Concrete implementation of the iterator protocol."""
+
     def __init__(self, link):
         self.here = link
 
