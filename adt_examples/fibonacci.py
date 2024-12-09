@@ -4,9 +4,10 @@
 class Fib:
     """The Fib class represents a fibonaci number."""
 
-    def __init__(self, fib_o=0, fib_1=1, next=None):
+    def __init__(self, next=None):
         """Fib class constructor method."""
-        self.value = value
+        self.fib_0 = 0
+        self.fib_1 = 1
         self.next = next
 
     def __iter__(self):
