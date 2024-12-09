@@ -1,4 +1,5 @@
 """Contains the class Fib for Ex 5 of OOP4Maths."""
+import pytest-timeout
 
 
 class Fib:
@@ -15,7 +16,7 @@ class Fib:
 
 class FibIterator:
         """Concrete implementation of the iterator protocol"""
-    def __iter__(self, link):
+    def __init__(self, link):
         self.here = link
 
     def __iter__(self):
