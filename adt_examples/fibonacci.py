@@ -1,5 +1,4 @@
 """Contains the class Fib for Ex 5 of OOP4Maths."""
-import pytest-timeout
 
 
 class Fib:
