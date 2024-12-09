@@ -1,20 +1,19 @@
 """Contains the class Fib for Ex 5 of OOP4Maths."""
 
-
 class Fib:
-    """The Fib class represents a fibonaci number."""
+    """The Fib class represents a fibonacci number."""
 
     def __init__(self, next=None):
         """Fib class constructor method."""
-        self.fib_0 = 0
-        self.fib_1 = 1
+        self.value1 = 0
+        self.value2 = 1
         self.next = next
 
     def __iter__(self):
         return FibIterator(self)
 
     def __next__(self):
-        return FibIterator(self.next)
+        return next(FibIterator(self))
 
 
 class FibIterator:
@@ -28,10 +27,12 @@ class FibIterator:
     def __next__(self):
         if self.here:
             next = self.here
-            f_1 = next.fib_0
-            f_2 = next.fib_1
-            next.fib_0 = f_1
-            next.fib_1 = f_1 + f_2
-            return next.fib_0 + next.fib_1
+            #self.here = self.here.next
+            f_1 = next.value1
+            f_2 = next.value2
+            next.value1 = f_2
+            next.value2 = f_1 + f_2
+            #print(f_1 + f_2)
+            return f_1 + f_2 
         else:
-            raise StopIteration      
+            raise StopIteration
