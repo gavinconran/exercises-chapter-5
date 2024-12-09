@@ -13,7 +13,7 @@ class Fib:
         return FibIterator(self)
 
 
- class FibIterator:
+class FibIterator:
         """Concrete implementation of the iterator protocol"""
     def __iter__(self, link):
         self.here = link
