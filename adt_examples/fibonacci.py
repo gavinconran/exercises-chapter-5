@@ -14,7 +14,7 @@ class Fib:
 
 
 class FibIterator:
-        """Concrete implementation of the iterator protocol"""
+    """Concrete implementation of the iterator protocol"""
     def __init__(self, link):
         self.here = link
 
@@ -27,5 +27,4 @@ class FibIterator:
         f_2 = next.fib_1
         next.fib_0 = f_1
         next.fib_1 = f_1 + f_2
-        return next.fib_0 + next.fib_1
-            
+        return next.fib_0 + next.fib_1       
