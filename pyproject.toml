@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "chapter-5"
 version = "0.1"
-dependencies = ["matplotlib", "scipy", "numpy"]
+dependencies = ["matplotlib", "scipy", "numpy", "pytest-timeout"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["adt_examples"]
