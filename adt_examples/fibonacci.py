@@ -23,9 +23,12 @@ class FibIterator:
         return self
 
     def __next__(self):
-        next = self.here
-        f_1 = next.fib_0
-        f_2 = next.fib_1
-        next.fib_0 = f_1
-        next.fib_1 = f_1 + f_2
-        return next.fib_0 + next.fib_1       
+        if self.here:
+            next = self.here
+            f_1 = next.fib_0
+            f_2 = next.fib_1
+            next.fib_0 = f_1
+            next.fib_1 = f_1 + f_2
+            return next.fib_0 + next.fib_1
+        else:
+            raise StopIteration      
