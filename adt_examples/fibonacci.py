@@ -10,8 +10,11 @@ class Fib:
         self.fib_1 = 1
         self.next = next
 
-    def __next__(self):
+    def __iter__(self):
         return FibIterator(self)
+
+    def __next__(self):
+        return FibIterator(self.next)
 
 
 class FibIterator:
