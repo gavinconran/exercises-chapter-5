@@ -1,6 +1,5 @@
 """Contains the class RPCalc for Ex 5 of OOP4Maths."""
 import numbers
-import numpy as np
 
 
 class RPCalc:
@@ -11,7 +10,7 @@ class RPCalc:
         self.stack = []
 
     def push(self, n):
-        """Returns the result of an operation."""
+        """Return the result of an operation."""
         if isinstance(n, numbers.Number):
             return self.stack.append(n)
         elif n in ["+", "-", "*", "/", "sin", "cos"]:
@@ -28,13 +27,13 @@ class RPCalc:
             print("Can't push")
 
     def pop(self):
-        """Removes the value from the top of the stack."""
+        """Remove the value from the top of the stack."""
         return self.stack.pop()
 
     def peek(self):
-        """Returns the value at the top of the stack."""
+        """Return the value at the top of the stack."""
         return self.stack[-1]
 
     def __len__(self):
-        """Returnss the length of the stack."""
+        """Return the length of the stack."""
         return len(self.stack)
