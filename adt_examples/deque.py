@@ -64,12 +64,15 @@ class DequeIterator:
 
     def __init__(self, deque):
         self.deque = deque
+        self.count = 0
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        if self.deque:
-            return self.deque.popleft()
+        if self.count < self.deque.length:
+            returned_value = self.deque.list[self.count]
+            self.count += 1
+            return returned_value
         else:
             raise StopIteration
