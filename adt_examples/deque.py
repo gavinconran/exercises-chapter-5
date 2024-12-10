@@ -71,6 +71,6 @@ class DequeIterator:
         if self.here:
             next = self.here
             self.here = self.here.next
-            return next.list[next.length]
+            return next.list
         else:
             raise StopIteration
