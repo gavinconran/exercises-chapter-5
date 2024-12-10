@@ -38,6 +38,7 @@ class Deque:
         x = self.list[0]
         self.length -= 1
         self.list[0: self.length] = copied_list
+        self.list[self.length] = None
         return x
 
     def peek(self):
@@ -55,22 +56,24 @@ class Deque:
         return self.length
 
     def __iter__(self):
+        #print(f'Deque.__iter__/self.deque.list: {DequeIterator(self)}')
         return DequeIterator(self)
 
 
 class DequeIterator:
     """Concrete implementation of the iterator protocol."""
 
-    def __init__(self, lst):
-        self.list = lst
+    def __init__(self, deque):
+        self.deque = deque
+        #print(f'DequeIterator.__init__/self.deque.list: {deque.list}')
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        if self.list:
-            #next = self.here
-            #self.here = self.here.next
-            return self.list
+        if self.deque:
+            #value = self.deque.popleft()
+            #print(f'self.deque.list: {value} + {self.deque.list}')
+            return self.deque.popleft()
         else:
-            raise StopIteration
+            raise StopIteration    
