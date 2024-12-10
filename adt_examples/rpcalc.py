@@ -7,10 +7,11 @@ class RPCalc:
     """The RPCalc class represents a Reverse Polish Calculator."""
 
     def __init__(self):
-        """RPCalc class constructor method."""
+        """Class constructor method."""
         self.stack = []
 
     def push(self, n):
+        """Returns the result of an operation."""
         if isinstance(n, numbers.Number):
             return self.stack.append(n)
         elif n in ["+", "-", "*", "/", "sin", "cos"]:
@@ -27,10 +28,13 @@ class RPCalc:
             print("Can't push")
 
     def pop(self):
+        """Removes the value from the top of the stack."""
         return self.stack.pop()
 
     def peek(self):
+        """Returns the value at the top of the stack."""
         return self.stack[-1]
 
     def __len__(self):
+        """Returnss the length of the stack."""
         return len(self.stack)
