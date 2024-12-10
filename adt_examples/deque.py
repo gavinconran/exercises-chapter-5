@@ -55,7 +55,7 @@ class Deque:
         return self.length
 
     def __iter__(self):
-        return FibIterator(self)
+        return DequeIterator(self)
 
 
 class DequeIterator:
