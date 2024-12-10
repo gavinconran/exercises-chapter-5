@@ -70,7 +70,6 @@ class DequeIterator:
 
     def __next__(self):
         if self.deque:
-            value = self.deque.popleft()
-            return value
+            return self.deque.popleft()
         else:
             raise StopIteration
