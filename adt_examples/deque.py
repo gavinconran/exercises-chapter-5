@@ -61,16 +61,16 @@ class Deque:
 class DequeIterator:
     """Concrete implementation of the iterator protocol."""
 
-    def __init__(self, link):
-        self.here = link
+    def __init__(self, lst):
+        self.list = lst
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        if self.here:
-            next = self.here
-            self.here = self.here.next
-            return [q for q in next.list]
+        if self.list:
+            #next = self.here
+            #self.here = self.here.next
+            return self.list
         else:
             raise StopIteration
