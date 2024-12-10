@@ -1,5 +1,6 @@
 """Contains the class RPCalc for Ex 5 of OOP4Maths."""
 import numbers
+import numpy as np # noqa F401
 
 
 class RPCalc:
