@@ -71,7 +71,6 @@ class DequeIterator:
     def __next__(self):
         if self.deque:
             value = self.deque.popleft()
-            # print(f'self.deque.list: {value} + {self.deque.list}')
             return value
         else:
-            raise StopIteration    
+            raise StopIteration
