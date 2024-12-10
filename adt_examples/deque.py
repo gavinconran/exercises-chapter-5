@@ -56,7 +56,6 @@ class Deque:
         return self.length
 
     def __iter__(self):
-        #print(f'Deque.__iter__/self.deque.list: {DequeIterator(self)}')
         return DequeIterator(self)
 
 
@@ -65,15 +64,14 @@ class DequeIterator:
 
     def __init__(self, deque):
         self.deque = deque
-        #print(f'DequeIterator.__init__/self.deque.list: {deque.list}')
 
     def __iter__(self):
         return self
 
     def __next__(self):
         if self.deque:
-            #value = self.deque.popleft()
-            #print(f'self.deque.list: {value} + {self.deque.list}')
-            return self.deque.popleft()
+            value = self.deque.popleft()
+            # print(f'self.deque.list: {value} + {self.deque.list}')
+            return value
         else:
             raise StopIteration    
